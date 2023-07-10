@@ -49,6 +49,7 @@ public class masashi {
         }else{
             skill= "15";
         }
+
         Damage= Integer.parseInt(skill);
         return Damage;
     }
@@ -56,15 +57,13 @@ public class masashi {
 
     public static void Damage(String skill){
         int damage = 0;
+
         String[] a=rale(skill);
         for(int i=0; i<a.length; i++){
             System.out.println(a[0]);
             damage = damage+ skill(a[i]);
             System.out.println(damage);
         };
-        // System.out.println(damage);
-        // int damage2 =skill(a[1]);
-        // System.out.println(damage2);
 
         System.out.println(Arrays.toString(rale(skill)));
     }
