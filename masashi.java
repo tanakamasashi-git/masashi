@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class masashi {
     public static void main(String[] args) {
-        System.out.println("aaaa");
+        
     }
 
     public static String Healer(){
@@ -30,6 +30,43 @@ public class masashi {
         }else{
             System.out.println("ンなもんねーよ殺すぞ");
         };
+    }
+
+    public static String[] rale(String rale){
+        String[] a= rale.split(",");
+        return a;
+    }
+
+    public static int skill(String skill1){
+        String skill;
+        int Damage;
+        // if(skill1=="連撃"){   ==をつかうなぼけかすほんまごみ2時間悩んだしね　https://www.sejuku.net/blog/14621
+        if(skill1.equals("連撃")){
+            skill= "310";
+            Damage= Integer.parseInt(skill);
+        }else if(skill1.equals("")){
+            skill= "20";
+        }else{
+            skill= "15";
+        }
+        Damage= Integer.parseInt(skill);
+        return Damage;
+    }
+
+
+    public static void Damage(String skill){
+        int damage = 0;
+        String[] a=rale(skill);
+        for(int i=0; i<a.length; i++){
+            System.out.println(a[0]);
+            damage = damage+ skill(a[i]);
+            System.out.println(damage);
+        };
+        // System.out.println(damage);
+        // int damage2 =skill(a[1]);
+        // System.out.println(damage2);
+
+        System.out.println(Arrays.toString(rale(skill)));
     }
 
 }
