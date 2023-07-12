@@ -68,5 +68,39 @@ public class masashi {
         System.out.println(Arrays.toString(rale(skill)));
     }
 
+    public static void total(String data){
+        String a="あ";
+
+        // int sum= 0;
+        // for(int i=0; i<data_string(data).length; i++){
+        //     sum = Integer.parseInt(data_string(data)[i]);
+        // }
+        // String c= String.valueOf(sum);
+
+        System.out.println("トータルダメージ："+a+"\n"+Arrays.toString(data_string(data)));
+    }
+
+    public static String[] data_string(String motodata){
+        String[] hai= motodata.split("\n");
+        String[] yoh = new String[3];  //中身の数を決めておく？newってなんやねん..こうしないと一生forの中でエラー。String[] yoh;だとだめ
+        String[] time = new String[hai.length];
+        String[] skill_name= new String[hai.length];
+        String[] damage= new String[hai.length];
+
+
+        for(int i=0; i<hai.length; i++){
+            yoh= hai[i].split("|");
+            time[i]= yoh[0];
+            skill_name[i]= yoh[1];
+            damage[i]= yoh[2];
+        }
+
+
+
+
+        // String[] hairetsu= hai;
+        return damage;
+    }
+
 }
 
