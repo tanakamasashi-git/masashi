@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.regex.Pattern;
 
 public class masashi {
     public static void main(String[] args) {
@@ -89,15 +90,13 @@ public class masashi {
 
 
         for(int i=0; i<hai.length; i++){
-            yoh= hai[i].split("|");
+            yoh= hai[i].split(Pattern.quote("|"));
             time[i]= yoh[0];
             skill_name[i]= yoh[1];
             damage[i]= yoh[2];
         }
 
-
-
-
+        // yoh= hai[0].split(Pattern.quote("|"));
         // String[] hairetsu= hai;
         return damage;
     }
